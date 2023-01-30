@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: rgb(231, 231, 231); */
+  min-height: 100vh;
+  background: url(../img/sea-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* overflow-x: hidden; */
+}
+
+.home-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*Navbar*/
+
+.navbar {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.navbar h1 {
+  color: #fff;
+  font-style: italic;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  /*Would like to change the font on this entirely*/
+}
+
+.navbar ul {
+  display: inline-flex;
+  list-style: none;
+  color: #fff;
+  margin-left: -2rem;
+}
+
+.navbar ul li {
+  margin: 15px;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 10.25rem;
+  margin-left: 2rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.active,
+.navbar ul li:hover {
+  /* background-color: #2bab0d; */
+  background-color: rgb(95, 95, 255);
+  border-radius: 3px;
+  transition: 0.35s ease;
+}
+
+.fontawesome {
+  padding: 0.5rem;
+}
+
+.navbar ul.dropdown {
+  min-width: 100%; /*Set width of the dropdown*/
+  background: rgb(127, 192, 214);
+  display: none;
+  position: absolute;
+  z-index: 999;
+  border-radius: 3px;
+}
+
+.sub-menu-1 {
+  background-color: lightblue;
+  position: absolute;
+  top: 5.1rem;
+  left: 51rem;
+}
+
+.navbar ul li:hover ul.dropdown {
+  display: block;
+  transition: all 0.35s ease;
+}
+
+/*End of Navbar*/
+
+/*Image Slider*/
+
+.carousel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 530px;
+  width: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+  /* object-fit: contain; */
+  object-fit: cover;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: lightblue;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 49.5%;
+}
+
+.btn:hover {
+  background-color: rgb(95, 95, 255);
+  transition: all 0.4s ease;
+}
+/*End of Image Slider*/
+
+/*Why buy?*/
+.reason-container {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+.reason-container h2 {
+  padding-bottom: 2rem;
+  font-size: 2.5rem;
+  font-style: italic;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.reasons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.reason {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 15rem;
+}
+
+.reason h5 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.reason i {
+  color: #00cc00;
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+/*End of Why Buy?*/
+
+/*Where we sell to*/
+.sell {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.sell h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.sell-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 2px #000 solid;
+  background-color: rgb(203, 211, 218);
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  /* background-color: #fff; */
+}
+
+.column {
+  padding: 5px 25px 10px 25px;
+}
+
+.list-title {
+  font-size: 24px;
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
+
+.column ul {
+  text-align: left;
+}
+
+.country {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.icon-green {
+  color: green;
+  padding-right: 5px;
+}
+
+.icon-yellow {
+  color: #facd74;
+  padding-right: 5px;
+}
+
+.icon-red {
+  color: #cf142b;
+  padding-right: 5px;
+}
+
+li img {
+  height: 18px;
+  width: 40px;
+}
+
+/*End of where we sell to*/
+
+/*Footer*/
+
+.footer {
+  /* background-color: rgb(199, 197, 197); */
+  background-color: lightblue;
+  height: 6rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-title {
+  color: #fff;
+  font-style: italic;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  font-size: 28px;
+}
+
+.subscribe {
+  text-align: center;
+}
+
+.subscribe p {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.subscribe button {
+  background-color: rgb(118, 118, 250);
+  color: #fff;
+  border: none;
+  width: 8.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 1rem;
+  box-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.3);
+}
+
+.subscribe button:hover {
+  background-color: rgb(88, 88, 182);
+  transition: 0.2s ease;
+}
+
+.subscribe button:active {
+  transform: scale(0.98);
+  box-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+.social-media {
+  text-align: center;
+}
+
+.social-media h5 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.social-media i {
+  color: #fff;
+  padding: 10px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.social-media i:hover {
+  color: dodgerblue;
+  transition: 0.4s ease;
+}
+
+/*End of Footer*/

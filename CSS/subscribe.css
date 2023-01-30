@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: url(../img/sea-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/*Navbar*/
+
+.home-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  /* margin-bottom: 2rem; */
+}
+
+.navbar h1 {
+  color: #fff;
+  font-style: italic;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  /*Would like to change the font on this entirely*/
+}
+
+.navbar ul {
+  display: inline-flex;
+  list-style: none;
+  color: #fff;
+  margin-left: -2rem;
+}
+
+.navbar ul li {
+  margin: 15px;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 10.25rem;
+  margin-left: 2rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.active,
+.navbar ul li:hover {
+  /* background-color: #2bab0d; */
+  background-color: rgb(95, 95, 255);
+  border-radius: 3px;
+  transition: 0.35s ease;
+}
+
+.fontawesome {
+  padding: 0.5rem;
+}
+
+.navbar ul.dropdown {
+  min-width: 100%; /*Set width of the dropdown*/
+  background: rgb(127, 192, 214);
+  display: none;
+  position: absolute;
+  z-index: 999;
+  border-radius: 3px;
+}
+
+.sub-menu-1 {
+  background-color: lightblue;
+  position: absolute;
+  top: 5.1rem;
+  left: 51rem;
+}
+
+.navbar ul li:hover ul.dropdown {
+  display: block;
+  transition: all 0.35s ease;
+}
+
+/*End of Navbar*/
+
+/* Subscribe */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: lightblue;
+  margin: 200px auto;
+  width: 35%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.heading-container {
+  margin: 20px auto;
+  /* text-align: center; */
+  color: #fff;
+}
+
+.heading-container h2 {
+  font-size: 28px;
+  letter-spacing: 0.2px;
+}
+
+.heading-container h2 + h4 {
+  font-size: 24px;
+  letter-spacing: 0.1px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-input-container {
+  padding: 3px;
+}
+
+.input {
+  height: 30px;
+  width: 400px;
+  padding-left: 33px;
+}
+
+#user {
+  color: #b4b4b4;
+  position: absolute;
+  left: 43.4rem;
+  top: 25.25rem;
+}
+
+#envelope {
+  color: #b4b4b4;
+  position: absolute;
+  left: 43.4rem;
+  top: 27.54rem;
+}
+
+input::placeholder {
+  color: #b4b4b4;
+}
+
+#checkbox {
+  cursor: pointer;
+}
+
+#checkbox + label {
+  color: rgb(97, 97, 97);
+}
+
+#underline {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: rgb(118, 118, 250);
+  color: #fff;
+  border: none;
+  width: 8.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 1rem;
+  box-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.3);
+  margin: 1rem 0 1rem 0;
+}
+
+.btn:hover {
+  background-color: rgb(88, 88, 182);
+  transition: 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+.btn + p {
+  font-size: 14px;
+  color: rgb(97, 97, 97);
+  padding-bottom: 8px;
+}
+
+/* End of Subscribe */
+
+/* Modal */
+.modal-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 400px;
+  background-color: rgb(95, 95, 255);
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-modal {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.close-modal {
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.1);
+  top: 0;
+}
+
+.tick {
+  height: 48px;
+  width: 48px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+  color: #fff;
+}
+
+.modal p {
+  color: #fff;
+  font-size: 18px;
+}
+
+.btn-close-modal {
+  background-color: lightblue;
+  color: #000;
+  border: none;
+  width: 4.25rem;
+  height: 2.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 1rem;
+  box-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.3);
+  margin: 1rem 0 1rem 0;
+}
+
+.btn-close-modal:hover {
+  background-color: rgb(222, 244, 252);
+  transition: 0.2s ease;
+}
+
+.btn-close-moda:active {
+  transform: scale(0.98);
+  box-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}
+/* End of Modal */

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/subscribe.css" />
+    <title>Subscribe</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <h1>
+        <a href="index.html" class="home-link">
+          Newfoundland's Finest Seafood</a
+        >
+      </h1>
+      <ul>
+        <li>
+          <a href="index.html">
+            <i class="fa-solid fa-house fontawesome"></i> Home</a
+          >
+        </li>
+        <li class="active">
+          <a href="products.html"
+            ><i class="fa-solid fa-fish fontawesome"></i>Products</a
+          >
+          <div class="sub-menu-1">
+            <ul class="dropdown">
+              <li>
+                <a href="#shellfish"
+                  ><i class="fa-solid fa-crab"></i>Shellfish</a
+                >
+                <!-- Font awesome icon is not appearing -->
+              </li>
+              <li><a href="#groundfish">Groundfish</a></li>
+              <li><a href="#pelagic">Pelagic</a></li>
+              <li><a href="#aquaculture">Aquaculture</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-leaf fontawesome"></i> Sustainable</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-regular fa-utensils fontawesome"></i> Recipes</a
+          >
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-building fontawesome"></i> About</a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-envelope fontawesome"></i> Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- End of Navbar -->
+
+    <!-- Subscribe -->
+    <div class="container">
+      <div class="field-container">
+        <div class="heading-container">
+          <h2>Get updated by subscribing to our newsletter</h2>
+          <h4>Do not miss any news, updates or sales.</h4>
+        </div>
+        <div class="form-container">
+          <form action="">
+            <div class="label-input-container">
+              <i class="fa-solid fa-user" id="user"></i>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="name"
+                class="input"
+                required
+              />
+            </div>
+
+            <div class="label-input-container">
+              <i class="fa-solid fa-envelope" id="envelope"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email"
+                class="input"
+                required
+              />
+            </div>
+
+            <div class="label-input-container">
+              <input type="checkbox" id="checkbox" />
+              <label
+                >I agree with
+                <span id="underline">terms and agreements</span></label
+              >
+            </div>
+          </form>
+          <div class="button-container">
+            <button class="btn">Subscribe</button>
+            <p>Your email is 100% secure with us</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Subscribe -->
+
+    <!-- Modal -->
+    <div class="modal-container">
+      <div class="modal" id="modal">
+        <img src="img/tick.png" alt="a green tick mark" class="tick" />
+        <h2>Thank you for subscribing</h2>
+        <p>You will recieve an email shortly</p>
+        <button type="button" class="btn-close-modal">OK</button>
+      </div>
+    </div>
+    <!-- End of Modal -->
+
+    <script src="JS/subscribe.js"></script>
+  </body>
+</html>
